@@ -8,14 +8,16 @@ body {
   display: flex;
   justify-content: center;
   background-image: url('bg2.png');
-  /* background-size: cover; */
 }
 .container {
-  position: relative;
-  min-width: 300px;
-  min-height: 400px;
-  margin: 50px 30px;
-  padding: 40px 30px 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 350px;
+  max-height: 550px;
+  padding: 20px;
+  padding-top: 25px;
   border-radius: 20px;
   background-image: url('cal.png');
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), 5px 5px 25px #fffb;
@@ -24,10 +26,10 @@ body {
   color: #fff;
   position: relative;
   display: grid;
-  width: 80px;
+  width: 60px;
   place-items: center;
   margin: 8px;
-  height: 80px;
+  height: 60px;
   background: linear-gradient(180deg, #2f2f2f, #3f3f3f);
   box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15),
     inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75),
@@ -43,11 +45,11 @@ body {
 .calculator span::before {
   content: "";
   position: absolute;
-  top: 3px;
-  left: 4px;
-  bottom: 14px;
-  right: 12px;
-  border-radius: 10px;
+  top: 2px;
+  left: 3px;
+  bottom: 12px;
+  right: 10px;
+  border-radius: 6px;
   background: linear-gradient(90deg, #2d2d2d, #4d4d4d);
   box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1),
     10px 5px 10px rgba(0, 0, 0, 0.15);
@@ -58,7 +60,7 @@ body {
 .calculator span i {
   position: relative;
   font-style: normal;
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-transform: uppercase;
 }
 .calculator {
@@ -68,7 +70,7 @@ body {
 .calculator .value {
   position: relative;
   grid-column: span 4;
-  height: 100px;
+  height: 80px;
   width: calc(100% - 20px);
   left: 10px;
   border: none;
@@ -78,11 +80,11 @@ body {
   border-radius: 10px;
   text-align: right;
   padding: 10px;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .calculator .clear {
   grid-column: span 2;
-  width: 180px;
+  width: 140px;
   background: #f00;
 }
 .calculator .clear::before {
@@ -93,7 +95,7 @@ body {
 }
 .calculator .plus {
   grid-row: span 2;
-  height: 180px;
+  height: 140px;
 }
 .calculator .equal {
   background: #2196f3;
